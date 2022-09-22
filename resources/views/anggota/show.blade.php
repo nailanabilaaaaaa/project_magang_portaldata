@@ -39,18 +39,19 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('npm') ? ' has-error' : '' }}">
-                                <label for="npm" class="col-md-4 control-label">NPM</label>
+                            <div class="form-group{{ $errors->has('nip') ? ' has-error' : '' }}">
+                                <label for="nip" class="col-md-4 control-label">NIP</label>
                                 <div class="col-md-6">
-                                    <input id="npm" type="number" class="form-control" name="npm"
-                                        value="{{ $data->npm }}" maxlength="8" readonly>
-                                    @if ($errors->has('npm'))
+                                    <input id="nip" type="number" class="form-control" name="nip"
+                                        value="{{ $data->nip }}" maxlength="8" readonly>
+                                    @if ($errors->has('nip'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('npm') }}</strong>
+                                        <strong>{{ $errors->first('nip') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
+
                             <div class="form-group{{ $errors->has('tempat_lahir') ? ' has-error' : '' }}">
                                 <label for="tempat_lahir" class="col-md-4 control-label">Tempat Lahir</label>
                                 <div class="col-md-6">
@@ -88,14 +89,16 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('prodi') ? ' has-error' : '' }}">
-                                <label for="prodi" class="col-md-4 control-label">Prodi</label>
+                            <div class="form-group{{ $errors->has('alamat') ? ' has-error' : '' }}">
+                                <label for="alamat" class="col-md-4 control-label">Tempat Lahir</label>
                                 <div class="col-md-6">
-                                    <select class="form-control" name="prodi" required="" disabled="">
-                                        <option value=""></option>
-                                        <option value="TI" {{$data->prodi === "TI" ? "selected" : ""}}>Teknik Informatika</option>
-                                        <option value="MI" {{$data->prodi === "MI" ? "selected" : ""}}>Manajemen Informatika</option>
-                                    </select>
+                                    <input id="alamat" type="text" class="form-control" name="alamat"
+                                        value="{{ $data->alamat }}" readonly>
+                                    @if ($errors->has('alamat'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('alamat') }}</strong>
+                                    </span>
+                                    @endif
                                 </div>
                             </div>
 

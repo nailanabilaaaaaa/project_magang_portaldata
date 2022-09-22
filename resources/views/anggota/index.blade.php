@@ -40,13 +40,13 @@
                                     Nama
                                 </th>
                                 <th>
-                                    NPM
-                                </th>
-                                <th>
-                                    Prodi
+                                    NIP
                                 </th>
                                 <th>
                                     Jenis Kelamin
+                                </th>
+                                <th>
+                                    Alamat
                                 </th>
                                 <th>
                                     Action
@@ -69,19 +69,15 @@
                                 </td>
                                 <td>
                                     <a href="{{route('anggota.show', $data->id)}}">
-                                        {{$data->npm}}
+                                        {{$data->nip}}
                                     </a>
                                 </td>
 
                                 <td>
-                                    @if($data->prodi == 'TI')
-                                    Teknik Informatika
-                                    @else($data->prodi == 'MI')
-                                    Manajemen Informatika
-                                    @endif
+                                    {{$data->jk === "L" ? "Laki - Laki" : "Perempuan"}}
                                 </td>
                                 <td>
-                                    {{$data->jk === "L" ? "Laki - Laki" : "Perempuan"}}
+                                    {{$data->alamat}}
                                 </td>
                                 <td>
                                     <div class="btn-group dropdown">
