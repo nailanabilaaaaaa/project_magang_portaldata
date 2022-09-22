@@ -81,6 +81,30 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="form-group{{ $errors->has('jumlahdata') ? ' has-error' : '' }}">
+                                <label for="jumlahdata" class="col-md-4 control-label">Jumlah Data</label>
+                                <div class="col-md-6">
+                                    <input id="jumlahdata" type="text" class="form-control" name="jumlahdata"
+                                        value="{{ old('jumlahdata') }}" required>
+                                    @if ($errors->has('jumlahdata'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('jumlahdata') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group{{ $errors->has('tahun') ? ' has-error' : '' }}">
+                                <label for="tahun" class="col-md-4 control-label">Tahun</label>
+                                <div class="col-md-6">
+                                    <input id="tahun" type="text" class="form-control" name="tahun"
+                                        value="{{ old('tahun') }}" required>
+                                    @if ($errors->has('tahun'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('tahun') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
                             <button type="submit" class="btn btn-primary" id="submit">
                                 Submit
                             </button>

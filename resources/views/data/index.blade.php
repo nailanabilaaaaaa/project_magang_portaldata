@@ -58,6 +58,12 @@
                                 <th>
                                     Sub Sub Data
                                 </th>
+                                <th>
+                                    Jumlah Data
+                                </th>
+                                <th>
+                                    Tahun
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
