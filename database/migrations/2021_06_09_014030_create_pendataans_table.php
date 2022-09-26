@@ -16,10 +16,6 @@ class CreatePendataansTable extends Migration
         Schema::create('data', function (Blueprint $table) {
             $table->increments('id');
             $table->string('perihaldata')->nullable();
-            $table->string('subdata')->nullable();
-            $table->string('subsubdata')->nullable();
-            $table->string('jumlahdata')->nullable();
-            $table->integer('tahun')->nullable();
             $table->timestamps();
         });
     }

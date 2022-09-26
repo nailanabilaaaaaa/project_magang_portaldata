@@ -67,11 +67,7 @@ class DataController extends Controller
             if (!empty($a) && $a->count()) {
                 foreach ($a as $key => $value) {
                     $insert[] = [
-                            'perihaldata' => $value->perihaldata, 
-                            'subdata' => $value->subdata, 
-                            'subsubdata' => $value->subsubdata, 
-                            'jumlahdata' => $value->jumlahdata,
-                            'tahun' => $value->tahun];
+                            'perihaldata' => $value->perihaldata];
 
                     Data::create($insert[$key]);
                         
@@ -92,24 +88,12 @@ class DataController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'perihaldata' => 'required|string|max:255',
-            'subdata' => 'required|string',
-            'addMoreInputFields.*.subsubdata' => 'required|string',
-            'jumlahdata' => 'required|string',
-            'tahun' => 'required|string'
+            'perihaldata' => 'required|string|max:255'
         ]);
 
         Data::create([
                 'perihaldata' => $request->get('perihaldata'),
-                'subdata' => $request->get('subdata'),
-                'subsubdata' => $request->get('subsubdata'),
-                'jumlahdata' => $request->get('jumlahdata'),
-                'tahun' => $request->get('tahun')
             ]);
-
-        foreach ($request->addMoreInputFields as $key => $value) {
-            Data::create($value);
-        }
 
         alert()->success('Berhasil.','Data telah ditambahkan!');
 
@@ -163,11 +147,7 @@ class DataController extends Controller
     public function update(Request $request, $id)
     {
         Data::find($id)->update([
-            'perihaldata' => $request->get('perihaldata'),
-            'subdata' => $request->get('subdata'),
-            'subsubdata' => $request->get('subsubdata'),
-            'jumlahdata' => $request->get('jumlahdata'),
-            'tahun' => $request->get('tahun')
+            'perihaldata' => $request->get('perihaldata')
         ]);
 
         alert()->success('Berhasil.','Data telah diubah!');

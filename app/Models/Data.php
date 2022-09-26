@@ -10,8 +10,5 @@ class Data extends Model
     use HasFactory;
 
     protected $table = 'data';
-    protected $fillable = ['perihaldata', 'subdata', 'subsubdata', 'jumlahdata', 'tahun'];
-
-    
-
+    protected $fillable = ['perihaldata'];
 }

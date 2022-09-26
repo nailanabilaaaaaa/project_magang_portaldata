@@ -43,26 +43,17 @@
         <div class="card">
 
             <div class="card-body">
-                <h4 class="card-title pull-left">Data</h4>
+                <h4 class="card-title pull-left">Perihal Data</h4>
                 {{-- <a href="{{url('format_data')}}" class="btn btn-xs btn-info pull-right">Format data</a> --}}
                 <div class="table-responsive">
                     <table class="table table-striped" id="table">
                         <thead>
                             <tr>
                                 <th>
-                                    Perihal Data
+                                    Nama
                                 </th>
                                 <th>
-                                    Sub Data
-                                </th>
-                                <th>
-                                    Sub Sub Data
-                                </th>
-                                <th>
-                                    Jumlah Data
-                                </th>
-                                <th>
-                                    Tahun
+                                    Aksi
                                 </th>
                             </tr>
                         </thead>
@@ -73,18 +64,6 @@
                                     <a href="{{route('data.show', $data->id)}}">
                                         {{$data->perihaldata}}
                                     </a>
-                                </td>
-                                <td>
-                                    {{$data->subdata}}
-                                </td>
-                                <td>
-                                    {{$data->subsubdata}}
-                                </td>
-                                <td>
-                                    {{$data->jumlahdata}}
-                                </td>
-                                <td>
-                                    {{$data->tahun}}
                                 </td>
                                 <td>
                                     <div class="btn-group dropdown">

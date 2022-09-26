@@ -17,10 +17,18 @@ class PendataansTableSeeder extends Seeder
             [
               'id'  			=> 1,
               'perihaldata'     => 'Data Kepegawaian',
-              'subdata'			=> 'Agama',
-              'subsubdata' 		=> 'Islam',
-              'jumlahdata'		=> '5',
-              'tahun'	        => 2020,
+              'created_at'      => \Carbon\Carbon::now(),
+              'updated_at'      => \Carbon\Carbon::now()
+            ],
+            [
+              'id'  			=> 2,
+              'perihaldata'     => 'PNS',
+              'created_at'      => \Carbon\Carbon::now(),
+              'updated_at'      => \Carbon\Carbon::now()
+            ],
+            [
+              'id'  			=> 3,
+              'perihaldata'     => 'Non PNS',
               'created_at'      => \Carbon\Carbon::now(),
               'updated_at'      => \Carbon\Carbon::now()
             ]
