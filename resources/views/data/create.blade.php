@@ -69,16 +69,17 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group{{ $errors->has('subsubdata') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('subsubdata') ? ' has-error' : '' }}" id="dynamicAddRemove">
                                 <label for="subsubdata" class="col-md-4 control-label">Sub Sub Data</label>
                                 <div class="col-md-6">
-                                    <input id="subsubdata" type="text" class="form-control" name="subsubdata"
+                                    <input id="subsubdata" type="text" class="form-control" name="addMoreInputFields[0][subsubdata]" placeholder="Enter SubSubData"
                                         value="{{ old('subsubdata') }}" required>
                                     @if ($errors->has('subsubdata'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('subsubdata') }}</strong>
                                     </span>
                                     @endif
+                                    <button type="button" name="add" id="dynamic-ar" class="btn btn-outline-primary"> + </button>
                                 </div>
                             </div>
                             <div class="form-group{{ $errors->has('jumlahdata') ? ' has-error' : '' }}">

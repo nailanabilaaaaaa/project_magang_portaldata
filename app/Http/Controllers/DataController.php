@@ -94,7 +94,7 @@ class DataController extends Controller
         $this->validate($request, [
             'perihaldata' => 'required|string|max:255',
             'subdata' => 'required|string',
-            'subsubdata' => 'required|string',
+            'addMoreInputFields.*.subsubdata' => 'required|string',
             'jumlahdata' => 'required|string',
             'tahun' => 'required|string'
         ]);
@@ -106,6 +106,10 @@ class DataController extends Controller
                 'jumlahdata' => $request->get('jumlahdata'),
                 'tahun' => $request->get('tahun')
             ]);
+
+        foreach ($request->addMoreInputFields as $key => $value) {
+            Data::create($value);
+        }
 
         alert()->success('Berhasil.','Data telah ditambahkan!');
 
