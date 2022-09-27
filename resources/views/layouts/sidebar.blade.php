@@ -44,7 +44,7 @@
                     <a class="nav-link {{ setActive(['anggota*']) }}" href="{{route('anggota.index')}}">Data Anggota</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ setActive(['data*']) }}" href="{{route('data.index')}}">Perihal Data</a>
+                    <a class="nav-link {{ setActive(['data*']) }}" href="{{route('data.index')}}">Data Utama</a>
                 </li>
             </ul>
         </div>

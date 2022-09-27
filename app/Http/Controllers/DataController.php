@@ -67,7 +67,7 @@ class DataController extends Controller
             if (!empty($a) && $a->count()) {
                 foreach ($a as $key => $value) {
                     $insert[] = [
-                            'perihaldata' => $value->perihaldata];
+                            'namadata' => $value->namadata];
 
                     Data::create($insert[$key]);
                         
@@ -88,11 +88,11 @@ class DataController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'perihaldata' => 'required|string|max:255'
+            'namadata' => 'required|string|max:255'
         ]);
 
         Data::create([
-                'perihaldata' => $request->get('perihaldata'),
+                'namadata' => $request->get('namadata'),
             ]);
 
         alert()->success('Berhasil.','Data telah ditambahkan!');
@@ -147,7 +147,7 @@ class DataController extends Controller
     public function update(Request $request, $id)
     {
         Data::find($id)->update([
-            'perihaldata' => $request->get('perihaldata')
+            'namadata' => $request->get('namadata')
         ]);
 
         alert()->success('Berhasil.','Data telah diubah!');

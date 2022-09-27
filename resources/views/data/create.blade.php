@@ -43,16 +43,16 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Add New Perihal Data</h4>
+                            <h4 class="card-title">Add New Data Utama</h4>
 
-                            <div class="form-group{{ $errors->has('perihaldata') ? ' has-error' : '' }}">
-                                <label for="judul" class="col-md-4 control-label">Nama</label>
+                            <div class="form-group{{ $errors->has('namadata') ? ' has-error' : '' }}">
+                                <label for="judul" class="col-md-4 control-label">Nama Data Utama</label>
                                 <div class="col-md-6">
-                                    <input id="perihaldata" type="text" class="form-control" name="perihaldata"
-                                        value="{{ old('perihaldata') }}" required>
-                                    @if ($errors->has('perihaldata'))
+                                    <input id="namadata" type="text" class="form-control" name="namadata"
+                                        value="{{ old('namadata') }}" required>
+                                    @if ($errors->has('namadata'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('perihaldata') }}</strong>
+                                        <strong>{{ $errors->first('namadata') }}</strong>
                                     </span>
                                     @endif
                                 </div>

@@ -41,17 +41,17 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Detail Data - <b>{{$data->perihaldata}}</b> </h4>
+                        <h4 class="card-title">Detail Data - <b>{{$data->namadata}}</b> </h4>
                         <form class="forms-sample">
 
-                            <div class="form-group{{ $errors->has('perihaldata') ? ' has-error' : '' }}">
-                                <label for="perihaldata" class="col-md-4 control-label">Perihal Data</label>
+                            <div class="form-group{{ $errors->has('namadata') ? ' has-error' : '' }}">
+                                <label for="namadata" class="col-md-4 control-label">Perihal Data</label>
                                 <div class="col-md-6">
-                                    <input id="judul" type="text" class="form-control" name="perihaldata"
-                                        value="{{ $data->perihaldata }}" readonly="">
-                                    @if ($errors->has('perihaldata'))
+                                    <input id="judul" type="text" class="form-control" name="namadata"
+                                        value="{{ $data->namadata }}" readonly="">
+                                    @if ($errors->has('namadata'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('perihaldata') }}</strong>
+                                        <strong>{{ $errors->first('namadata') }}</strong>
                                     </span>
                                     @endif
                                 </div>

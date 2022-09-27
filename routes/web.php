@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Http\Request;
 
 /*
@@ -30,6 +31,8 @@ Route::resource('/user', UserController::class);
 Route::resource('/anggota', AnggotaController::class);
 
 Route::resource('/data', DataController::class);
+
+Route::resource('/mahasiswa', MahasiswaController::class);
 
 Route::get('/laporan/data', [LaporanController::class, 'data']);
 Route::get('/laporan/data/pdf', [LaporanController::class, 'dataPdf']);

@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="{{ url('store-input-fields') }}" method="POST">
+        <form action="{{ route('mahasiswa.store') }}" method="POST">
             @csrf
             @if ($errors->any())
             <div class="alert alert-danger" role="alert">

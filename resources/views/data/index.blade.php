@@ -50,7 +50,7 @@
                         <thead>
                             <tr>
                                 <th>
-                                    Nama
+                                    Nama Data Utama
                                 </th>
                                 <th>
                                     Aksi
@@ -62,7 +62,7 @@
                             <tr>
                                 <td class="py-1">
                                     <a href="{{route('data.show', $data->id)}}">
-                                        {{$data->perihaldata}}
+                                        {{$data->namadata}}
                                     </a>
                                 </td>
                                 <td>
